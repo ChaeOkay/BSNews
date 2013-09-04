@@ -127,8 +127,6 @@ desc 'reset database'
 task 'reset' do
   exec 'rake db:drop; rake db:create; rake db:migrate; rake db:seed'
 end
-  
-end
 
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
