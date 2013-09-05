@@ -6,10 +6,16 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   $('#comment_form').on('submit', function(event){
     event.preventDefault();
+    var formData = $(this).serialize();
+    console.log(formData);
+
     $.ajax({
       url: this.action,
       type: this.method,
-      data: 
-    })
-  })
+      data: formData
+    }).done(function(response){
+
+      $('ul:first-child').prepend(response);
+    });
+  });
 });
