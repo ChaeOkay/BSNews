@@ -1,4 +1,8 @@
 get '/' do
   # Look in app/views/index.erb
-  erb :index
+  redirect '/posts'
+end
+
+get '/posts' do
+  erb :posts
 end
