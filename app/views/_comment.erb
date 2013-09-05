@@ -1,0 +1,11 @@
+<li>
+  <div class='list-item'>
+    <span>
+      <a class='user' href="/user/<%= passed_comment.user.id %>">
+      <%= passed_comment.user.username %></a> | <%= passed_comment.created_at %>
+    </span> <br>
+    <span class='title'>
+      <%= passed_comment.description %>
+    </span>
+  </div>
+</li> 

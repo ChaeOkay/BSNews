@@ -1,0 +1,13 @@
+<h1><%= @post.title %></h1>
+
+<%=erb :_form_comment %>
+
+<div class='comments'>
+  <ul>
+
+    <% @comments.each do |comment| %>
+      <%= erb :_comment, :locals => { passed_comment: comment } %>
+    <% end %>
+
+  </ul>
+</div>
