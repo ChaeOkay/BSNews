@@ -4,5 +4,6 @@ get '/' do
 end
 
 get '/posts' do
+  @post = Post.order("created_at DESC")
   erb :posts
 end

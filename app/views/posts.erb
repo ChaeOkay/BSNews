@@ -1,2 +1,11 @@
-
-  
+<ul>
+<% @post.each_with_index do |post, index| %>
+    <li>
+      <div class='list-item'>
+        <span class='numbers'><%= index + 1 %>.</span>
+        <a class='title' href="/posts/<%= post.id %>/comments"><%= post.title %></a><br>
+        <a class='user' href="/user/<%= post.user.id %>"><%= post.user.username %> | <%= post.comments.size %> comments</a>
+      </div> 
+    </li>
+  <% end %>
+</ul>
