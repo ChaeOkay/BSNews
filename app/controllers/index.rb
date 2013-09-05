@@ -13,3 +13,7 @@ get '/posts/:post_id/comments' do
   @comments = @post.comments
   erb :post_comments
 end
+
+post '/post/:post_id/comments' do
+  
+end

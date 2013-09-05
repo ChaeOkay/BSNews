@@ -6,7 +6,7 @@ end
 
 User.all.each do |user|
   2.times do
-    user.posts << Post.create(title: Faker::Company.catch_phrase)
+    user.posts << Post.create(title: Faker::Company.bs)
   end
 end
 
@@ -14,7 +14,7 @@ users = User.all.shuffle
 
 Post.all.each do |post|
   users.each do |user|
-    Comment.create(:user_id => user.id, :post_id => post.id, :description => Faker::Company.bs)
+    Comment.create(:user_id => user.id, :post_id => post.id, :description => Faker::Lorem.paragraph(sentence_count = 5))
   end
 end
 
