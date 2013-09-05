@@ -9,3 +9,9 @@ get '/user/:user_id/comments' do
 
   erb :user_comments
 end
+
+get '/user/:user_id/posts' do 
+  @posts = User.find(params[:user_id]).posts.order("created_at DESC")
+
+  erb :user_posts
+end
