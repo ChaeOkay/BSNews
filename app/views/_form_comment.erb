@@ -1,1 +1,6 @@
-Form Comment here
+<div class='comment_form'>
+  <form action='/post/<%= @post.id %>/comments' method='post'>
+    <textarea name='description' class='comment_description' cols='40' rows='5' placeholder='Enter Comment Here'></textarea><br>
+    <input type='submit' value='Submit Comment'>
+  </form>
+</div>
