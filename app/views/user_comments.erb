@@ -1,11 +1,13 @@
-<h1><a href="/user/<%= @comments.first.user.id %>"><%= @comments.first.user.username.capitalize %>'s Comments</a></h1>
+<div id='show_all_user_comments'>
+  <h1><a href="/user/<%= @comments.first.user.id %>"><%= @comments.first.user.username.capitalize %>'s Comments</a></h1>
 
-<div class='comments'>
-  <ul>
+  <div class='comments'>
+    <ul>
 
-    <% @comments.each do |comment| %>
-      <%= erb :_user_comments, :locals => { passed_comment: comment } %>
-    <% end %>
+      <% @comments.each do |comment| %>
+        <%= erb :_user_comments, :locals => { passed_comment: comment } %>
+      <% end %>
 
-  </ul>
+    </ul>
+  </div>
 </div>
